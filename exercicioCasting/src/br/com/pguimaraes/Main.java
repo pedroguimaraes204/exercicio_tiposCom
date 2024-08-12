@@ -2,20 +2,37 @@ package br.com.pguimaraes;
 
 public class Main {
 
-    // casting implicito
+    public static void main(String args[]) {
+        unbox();
+        castingIm();
+        castingEx();
+    }
+
+    //unboxing
+    static Boolean a = true;
+    static Integer i = 2;
+    static Long l = 11L;
+
+    public static void unbox(){
+        System.out.println(a);
+        System.out.println(i);
+        System.out.println(l);
+    }
+
+    // casting implicito de tipo primitivo para primitivo
 
     static int num1 = 23;
     static long num2 = num1;
 
-    public static void main(String args[]) {
+    public static void  castingIm(){
         System.out.println(num2);
-        castingEx();
     }
 
-    //casting explicito
 
-    static long num3 = 1111111111111111111L;
-    static int num4 = (int) num3;
+    //casting explicito de tipo primitivo para complexo
+
+    static int num3 = 111111;
+    static int num4 = (Integer) num3;
 
     public static void castingEx(){
         System.out.println(num4);
